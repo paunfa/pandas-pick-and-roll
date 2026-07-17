@@ -11,6 +11,6 @@ df = pd.DataFrame(nba_players)
 print(df.head())
 
 # Save the data
-df.to_csv("../data/players.csv", index=False)
+df.to_csv("../data/raw/players.csv", index=False)
 
 print(f"\nSuccessfully downloaded {len(df)} players!")
