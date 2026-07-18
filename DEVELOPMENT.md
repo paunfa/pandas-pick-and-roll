@@ -183,3 +183,23 @@ Changes
 * Power BI dashboard
 
 ---
+
+## Day 2: Weekly Schedule Analytics Pipeline
+
+Completed:
+- Built NBA schedule data collection pipeline
+- Created raw and processed data structure
+- Added weekly schedule calculations
+- Added schedule strength ratings
+- Improved script organization
+- Connected project to GitHub
+- Established main branch workflow
+
+Git concepts learned:
+- Feature branches
+- Remote repositories
+- Push/pull workflow
+- Branch merging
+- Default branch management
+
+---

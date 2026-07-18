@@ -18,27 +18,35 @@ Help fantasy basketball managers identify the best waiver-wire pickups and strea
 
 
 
-## Progress Log
+# Progress Log
 
-### Current Progress
+## Current Progress
 
 - ✅ Player data pipeline
 - ✅ Historical schedule pipeline
 - 🚧 Streaming Score model
 - ⏳ Power BI dashboard
 
-### Day 1 Complete
+## Day 1 Completed Features
 - Set up Python environment
 - Created Git repository
 - Built NBA player data pipeline
 - Added initial data exploration scripts
 
-### Day 2 Completed Features
+## Day 2 Completed Features
 
-- Collected historical NBA team game logs using the NBA Stats API
-- Engineered schedule features:
-  - Home/Away
-  - Opponent
-  - Fantasy week assignment
-- Built weekly schedule aggregation by team
-- Created the foundation for future Streaming Score calculations
+### Weekly Schedule Advantage Tracker
+
+The dashboard now includes a historical NBA schedule pipeline.
+
+Current capabilities:
+- Collect NBA team game logs
+- Organize games by fantasy week
+- Calculate games played per team
+- Classify schedule strength
+
+Schedule categories:
+- 4+ games: Very Strong
+- 3 games: Strong
+- 2 games: Weak
+- 1 game or less: Very Weak
