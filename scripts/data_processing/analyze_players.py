@@ -1,3 +1,11 @@
+"""
+Reads collected NBA player data and analyzes it.
+
+This script takes data from our players.csv file (made from the NBA Stats API)
+and executes basic search functions.  Saves a list of currently active players
+to the data/raw directory.
+"""
+
 import pandas as pd
 
 # Load the CSV we created
@@ -41,4 +49,7 @@ output_path = project_root / "data" / "raw" / "active_players.csv"
 
 active_players.to_csv(output_path, index=False)
 
-print(f"\nSuccessfully saved log of active players to {output_path}!")
+print("\n==========================================="
+      "\nSuccessfully saved log of active players!"
+      f"\nSaved to: {output_path}"
+      "\n===========================================")

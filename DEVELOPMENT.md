@@ -44,6 +44,31 @@ Follow these conventions:
 - Add docstrings to functions.
 - Keep scripts focused on one responsibility.
 
+## Data Modeling Principles
+
+The project separates:
+
+- Human-readable classifications (e.g., `SCHEDULE_RATING`)
+- Numeric scores (future `SCHEDULE_SCORE`)
+- Composite analytics (future `STREAMING_SCORE`)
+
+## Development Workflow
+
+For each new feature:
+
+1. Write the transformation.
+2. Verify with temporary print statements.
+3. Validate the output.
+4. Remove temporary debugging output.
+5. Save the processed dataset.
+---
+
+# Data Processing Standards
+
+- Convert date columns to `datetime64` before performing any date calculations.
+- Assign each game to a fantasy week using the Monday of that week (`WEEK_START`).
+- Validate each transformation with temporary print statements, then remove them once verified.
+
 ---
 
 # DataFrame Naming
@@ -104,9 +129,11 @@ Data Processing
         ↓
 Feature Engineering
         ↓
-Analytics
+Weekly Schedule Analytics
         ↓
-Dashboard
+Streaming Score (Coming Soon)        
+        ↓
+Power BI Dashboard
 ```
 
 ---
