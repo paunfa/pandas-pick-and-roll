@@ -1,0 +1,751 @@
+WEEK_START,TEAM_ABBREVIATION,GAMES_THIS_WEEK,SCHEDULE_RATING
+2025-10-20,ATL,3,Strong
+2025-10-20,BKN,3,Strong
+2025-10-20,BOS,3,Strong
+2025-10-20,CHA,3,Strong
+2025-10-20,CHI,2,Weak
+2025-10-20,CLE,3,Strong
+2025-10-20,DAL,3,Strong
+2025-10-20,DEN,2,Weak
+2025-10-20,DET,3,Strong
+2025-10-20,GSW,3,Strong
+2025-10-20,HOU,2,Weak
+2025-10-20,IND,3,Strong
+2025-10-20,LAC,3,Strong
+2025-10-20,LAL,3,Strong
+2025-10-20,MEM,3,Strong
+2025-10-20,MIA,3,Strong
+2025-10-20,MIL,3,Strong
+2025-10-20,MIN,3,Strong
+2025-10-20,NOP,2,Weak
+2025-10-20,NYK,3,Strong
+2025-10-20,OKC,3,Strong
+2025-10-20,ORL,3,Strong
+2025-10-20,PHI,2,Weak
+2025-10-20,PHX,3,Strong
+2025-10-20,POR,3,Strong
+2025-10-20,SAC,3,Strong
+2025-10-20,SAS,3,Strong
+2025-10-20,TOR,3,Strong
+2025-10-20,UTA,2,Weak
+2025-10-20,WAS,3,Strong
+2025-10-27,ATL,4,Very Strong
+2025-10-27,BKN,3,Strong
+2025-10-27,BOS,4,Very Strong
+2025-10-27,CHA,4,Very Strong
+2025-10-27,CHI,4,Very Strong
+2025-10-27,CLE,4,Very Strong
+2025-10-27,DAL,3,Strong
+2025-10-27,DEN,3,Strong
+2025-10-27,DET,3,Strong
+2025-10-27,GSW,4,Very Strong
+2025-10-27,HOU,3,Strong
+2025-10-27,IND,3,Strong
+2025-10-27,LAC,2,Weak
+2025-10-27,LAL,4,Very Strong
+2025-10-27,MEM,4,Very Strong
+2025-10-27,MIA,3,Strong
+2025-10-27,MIL,3,Strong
+2025-10-27,MIN,3,Strong
+2025-10-27,NOP,4,Very Strong
+2025-10-27,NYK,3,Strong
+2025-10-27,OKC,4,Very Strong
+2025-10-27,ORL,4,Very Strong
+2025-10-27,PHI,4,Very Strong
+2025-10-27,PHX,4,Very Strong
+2025-10-27,POR,3,Strong
+2025-10-27,SAC,3,Strong
+2025-10-27,SAS,3,Strong
+2025-10-27,TOR,4,Very Strong
+2025-10-27,UTA,4,Very Strong
+2025-10-27,WAS,3,Strong
+2025-11-03,ATL,3,Strong
+2025-11-03,BKN,4,Very Strong
+2025-11-03,BOS,4,Very Strong
+2025-11-03,CHA,2,Weak
+2025-11-03,CHI,3,Strong
+2025-11-03,CLE,3,Strong
+2025-11-03,DAL,4,Very Strong
+2025-11-03,DEN,4,Very Strong
+2025-11-03,DET,4,Very Strong
+2025-11-03,GSW,4,Very Strong
+2025-11-03,HOU,4,Very Strong
+2025-11-03,IND,4,Very Strong
+2025-11-03,LAC,4,Very Strong
+2025-11-03,LAL,3,Strong
+2025-11-03,MEM,4,Very Strong
+2025-11-03,MIA,4,Very Strong
+2025-11-03,MIL,4,Very Strong
+2025-11-03,MIN,4,Very Strong
+2025-11-03,NOP,3,Strong
+2025-11-03,NYK,3,Strong
+2025-11-03,OKC,4,Very Strong
+2025-11-03,ORL,3,Strong
+2025-11-03,PHI,4,Very Strong
+2025-11-03,PHX,3,Strong
+2025-11-03,POR,3,Strong
+2025-11-03,SAC,4,Very Strong
+2025-11-03,SAS,3,Strong
+2025-11-03,TOR,3,Strong
+2025-11-03,UTA,3,Strong
+2025-11-03,WAS,4,Very Strong
+2025-11-10,ATL,4,Very Strong
+2025-11-10,BKN,3,Strong
+2025-11-10,BOS,3,Strong
+2025-11-10,CHA,4,Very Strong
+2025-11-10,CHI,3,Strong
+2025-11-10,CLE,4,Very Strong
+2025-11-10,DAL,4,Very Strong
+2025-11-10,DEN,3,Strong
+2025-11-10,DET,3,Strong
+2025-11-10,GSW,4,Very Strong
+2025-11-10,HOU,3,Strong
+2025-11-10,IND,3,Strong
+2025-11-10,LAC,4,Very Strong
+2025-11-10,LAL,4,Very Strong
+2025-11-10,MEM,3,Strong
+2025-11-10,MIA,3,Strong
+2025-11-10,MIL,4,Very Strong
+2025-11-10,MIN,3,Strong
+2025-11-10,NOP,4,Very Strong
+2025-11-10,NYK,3,Strong
+2025-11-10,OKC,3,Strong
+2025-11-10,ORL,4,Very Strong
+2025-11-10,PHI,2,Weak
+2025-11-10,PHX,4,Very Strong
+2025-11-10,POR,4,Very Strong
+2025-11-10,SAC,4,Very Strong
+2025-11-10,SAS,4,Very Strong
+2025-11-10,TOR,3,Strong
+2025-11-10,UTA,4,Very Strong
+2025-11-10,WAS,3,Strong
+2025-11-17,ATL,4,Very Strong
+2025-11-17,BKN,3,Strong
+2025-11-17,BOS,3,Strong
+2025-11-17,CHA,4,Very Strong
+2025-11-17,CHI,4,Very Strong
+2025-11-17,CLE,4,Very Strong
+2025-11-17,DAL,4,Very Strong
+2025-11-17,DEN,4,Very Strong
+2025-11-17,DET,3,Strong
+2025-11-17,GSW,3,Strong
+2025-11-17,HOU,2,Weak
+2025-11-17,IND,3,Strong
+2025-11-17,LAC,4,Very Strong
+2025-11-17,LAL,2,Weak
+2025-11-17,MEM,3,Strong
+2025-11-17,MIA,4,Very Strong
+2025-11-17,MIL,3,Strong
+2025-11-17,MIN,3,Strong
+2025-11-17,NOP,4,Very Strong
+2025-11-17,NYK,3,Strong
+2025-11-17,OKC,4,Very Strong
+2025-11-17,ORL,4,Very Strong
+2025-11-17,PHI,4,Very Strong
+2025-11-17,PHX,3,Strong
+2025-11-17,POR,4,Very Strong
+2025-11-17,SAC,3,Strong
+2025-11-17,SAS,3,Strong
+2025-11-17,TOR,4,Very Strong
+2025-11-17,UTA,3,Strong
+2025-11-17,WAS,3,Strong
+2025-11-24,ATL,3,Strong
+2025-11-24,BKN,3,Strong
+2025-11-24,BOS,3,Strong
+2025-11-24,CHA,3,Strong
+2025-11-24,CHI,3,Strong
+2025-11-24,CLE,3,Strong
+2025-11-24,DAL,3,Strong
+2025-11-24,DEN,3,Strong
+2025-11-24,DET,4,Very Strong
+2025-11-24,GSW,3,Strong
+2025-11-24,HOU,3,Strong
+2025-11-24,IND,4,Very Strong
+2025-11-24,LAC,3,Strong
+2025-11-24,LAL,3,Strong
+2025-11-24,MEM,4,Very Strong
+2025-11-24,MIA,3,Strong
+2025-11-24,MIL,4,Very Strong
+2025-11-24,MIN,4,Very Strong
+2025-11-24,NOP,4,Very Strong
+2025-11-24,NYK,4,Very Strong
+2025-11-24,OKC,3,Strong
+2025-11-24,ORL,2,Weak
+2025-11-24,PHI,3,Strong
+2025-11-24,PHX,4,Very Strong
+2025-11-24,POR,3,Strong
+2025-11-24,SAC,4,Very Strong
+2025-11-24,SAS,3,Strong
+2025-11-24,TOR,4,Very Strong
+2025-11-24,UTA,3,Strong
+2025-11-24,WAS,2,Weak
+2025-12-01,ATL,4,Very Strong
+2025-12-01,BKN,4,Very Strong
+2025-12-01,BOS,4,Very Strong
+2025-12-01,CHA,4,Very Strong
+2025-12-01,CHI,4,Very Strong
+2025-12-01,CLE,4,Very Strong
+2025-12-01,DAL,4,Very Strong
+2025-12-01,DEN,4,Very Strong
+2025-12-01,DET,4,Very Strong
+2025-12-01,GSW,4,Very Strong
+2025-12-01,HOU,4,Very Strong
+2025-12-01,IND,3,Strong
+2025-12-01,LAC,4,Very Strong
+2025-12-01,LAL,4,Very Strong
+2025-12-01,MEM,3,Strong
+2025-12-01,MIA,4,Very Strong
+2025-12-01,MIL,4,Very Strong
+2025-12-01,MIN,3,Strong
+2025-12-01,NOP,3,Strong
+2025-12-01,NYK,4,Very Strong
+2025-12-01,OKC,3,Strong
+2025-12-01,ORL,4,Very Strong
+2025-12-01,PHI,4,Very Strong
+2025-12-01,PHX,2,Weak
+2025-12-01,POR,4,Very Strong
+2025-12-01,SAC,2,Weak
+2025-12-01,SAS,3,Strong
+2025-12-01,TOR,4,Very Strong
+2025-12-01,UTA,4,Very Strong
+2025-12-01,WAS,4,Very Strong
+2025-12-08,ATL,2,Weak
+2025-12-08,BKN,2,Weak
+2025-12-08,BOS,1,Very Weak
+2025-12-08,CHA,2,Weak
+2025-12-08,CHI,2,Weak
+2025-12-08,CLE,2,Weak
+2025-12-08,DAL,1,Very Weak
+2025-12-08,DEN,1,Very Weak
+2025-12-08,DET,1,Very Weak
+2025-12-08,GSW,2,Weak
+2025-12-08,HOU,1,Very Weak
+2025-12-08,IND,3,Strong
+2025-12-08,LAC,1,Very Weak
+2025-12-08,LAL,2,Weak
+2025-12-08,MEM,1,Very Weak
+2025-12-08,MIA,1,Very Weak
+2025-12-08,MIL,2,Weak
+2025-12-08,MIN,3,Strong
+2025-12-08,NOP,3,Strong
+2025-12-08,NYK,2,Weak
+2025-12-08,OKC,2,Weak
+2025-12-08,ORL,2,Weak
+2025-12-08,PHI,2,Weak
+2025-12-08,PHX,3,Strong
+2025-12-08,POR,2,Weak
+2025-12-08,SAC,3,Strong
+2025-12-08,SAS,3,Strong
+2025-12-08,TOR,1,Very Weak
+2025-12-08,UTA,1,Very Weak
+2025-12-08,WAS,2,Weak
+2025-12-15,ATL,3,Strong
+2025-12-15,BKN,2,Weak
+2025-12-15,BOS,3,Strong
+2025-12-15,CHA,2,Weak
+2025-12-15,CHI,3,Strong
+2025-12-15,CLE,2,Weak
+2025-12-15,DAL,3,Strong
+2025-12-15,DEN,3,Strong
+2025-12-15,DET,3,Strong
+2025-12-15,GSW,2,Weak
+2025-12-15,HOU,4,Very Strong
+2025-12-15,IND,2,Weak
+2025-12-15,LAC,3,Strong
+2025-12-15,LAL,2,Weak
+2025-12-15,MEM,3,Strong
+2025-12-15,MIA,4,Very Strong
+2025-12-15,MIL,2,Weak
+2025-12-15,MIN,3,Strong
+2025-12-15,NOP,2,Weak
+2025-12-15,NYK,3,Strong
+2025-12-15,OKC,2,Weak
+2025-12-15,ORL,2,Weak
+2025-12-15,PHI,2,Weak
+2025-12-15,PHX,2,Weak
+2025-12-15,POR,2,Weak
+2025-12-15,SAC,3,Strong
+2025-12-15,SAS,3,Strong
+2025-12-15,TOR,4,Very Strong
+2025-12-15,UTA,3,Strong
+2025-12-15,WAS,3,Strong
+2025-12-22,ATL,3,Strong
+2025-12-22,BKN,2,Weak
+2025-12-22,BOS,3,Strong
+2025-12-22,CHA,3,Strong
+2025-12-22,CHI,3,Strong
+2025-12-22,CLE,4,Very Strong
+2025-12-22,DAL,4,Very Strong
+2025-12-22,DEN,4,Very Strong
+2025-12-22,DET,4,Very Strong
+2025-12-22,GSW,3,Strong
+2025-12-22,HOU,3,Strong
+2025-12-22,IND,4,Very Strong
+2025-12-22,LAC,3,Strong
+2025-12-22,LAL,3,Strong
+2025-12-22,MEM,4,Very Strong
+2025-12-22,MIA,3,Strong
+2025-12-22,MIL,3,Strong
+2025-12-22,MIN,3,Strong
+2025-12-22,NOP,4,Very Strong
+2025-12-22,NYK,3,Strong
+2025-12-22,OKC,4,Very Strong
+2025-12-22,ORL,4,Very Strong
+2025-12-22,PHI,3,Strong
+2025-12-22,PHX,3,Strong
+2025-12-22,POR,4,Very Strong
+2025-12-22,SAC,3,Strong
+2025-12-22,SAS,3,Strong
+2025-12-22,TOR,3,Strong
+2025-12-22,UTA,4,Very Strong
+2025-12-22,WAS,3,Strong
+2025-12-29,ATL,4,Very Strong
+2025-12-29,BKN,4,Very Strong
+2025-12-29,BOS,3,Strong
+2025-12-29,CHA,4,Very Strong
+2025-12-29,CHI,4,Very Strong
+2025-12-29,CLE,4,Very Strong
+2025-12-29,DAL,3,Strong
+2025-12-29,DEN,4,Very Strong
+2025-12-29,DET,3,Strong
+2025-12-29,GSW,4,Very Strong
+2025-12-29,HOU,3,Strong
+2025-12-29,IND,4,Very Strong
+2025-12-29,LAC,3,Strong
+2025-12-29,LAL,3,Strong
+2025-12-29,MEM,3,Strong
+2025-12-29,MIA,4,Very Strong
+2025-12-29,MIL,4,Very Strong
+2025-12-29,MIN,4,Very Strong
+2025-12-29,NOP,4,Very Strong
+2025-12-29,NYK,4,Very Strong
+2025-12-29,OKC,4,Very Strong
+2025-12-29,ORL,4,Very Strong
+2025-12-29,PHI,3,Strong
+2025-12-29,PHX,4,Very Strong
+2025-12-29,POR,4,Very Strong
+2025-12-29,SAC,4,Very Strong
+2025-12-29,SAS,4,Very Strong
+2025-12-29,TOR,3,Strong
+2025-12-29,UTA,3,Strong
+2025-12-29,WAS,4,Very Strong
+2026-01-05,ATL,4,Very Strong
+2026-01-05,BKN,3,Strong
+2026-01-05,BOS,4,Very Strong
+2026-01-05,CHA,4,Very Strong
+2026-01-05,CHI,3,Strong
+2026-01-05,CLE,3,Strong
+2026-01-05,DAL,3,Strong
+2026-01-05,DEN,4,Very Strong
+2026-01-05,DET,3,Strong
+2026-01-05,GSW,4,Very Strong
+2026-01-05,HOU,4,Very Strong
+2026-01-05,IND,3,Strong
+2026-01-05,LAC,4,Very Strong
+2026-01-05,LAL,3,Strong
+2026-01-05,MEM,4,Very Strong
+2026-01-05,MIA,3,Strong
+2026-01-05,MIL,3,Strong
+2026-01-05,MIN,4,Very Strong
+2026-01-05,NOP,4,Very Strong
+2026-01-05,NYK,4,Very Strong
+2026-01-05,OKC,4,Very Strong
+2026-01-05,ORL,4,Very Strong
+2026-01-05,PHI,4,Very Strong
+2026-01-05,PHX,4,Very Strong
+2026-01-05,POR,4,Very Strong
+2026-01-05,SAC,3,Strong
+2026-01-05,SAS,4,Very Strong
+2026-01-05,TOR,4,Very Strong
+2026-01-05,UTA,4,Very Strong
+2026-01-05,WAS,4,Very Strong
+2026-01-12,ATL,3,Strong
+2026-01-12,BKN,4,Very Strong
+2026-01-12,BOS,3,Strong
+2026-01-12,CHA,4,Very Strong
+2026-01-12,CHI,4,Very Strong
+2026-01-12,CLE,3,Strong
+2026-01-12,DAL,4,Very Strong
+2026-01-12,DEN,4,Very Strong
+2026-01-12,DET,2,Weak
+2026-01-12,GSW,3,Strong
+2026-01-12,HOU,4,Very Strong
+2026-01-12,IND,4,Very Strong
+2026-01-12,LAC,3,Strong
+2026-01-12,LAL,5,Very Strong
+2026-01-12,MEM,2,Weak
+2026-01-12,MIA,3,Strong
+2026-01-12,MIL,2,Weak
+2026-01-12,MIN,3,Strong
+2026-01-12,NOP,4,Very Strong
+2026-01-12,NYK,3,Strong
+2026-01-12,OKC,3,Strong
+2026-01-12,ORL,2,Weak
+2026-01-12,PHI,3,Strong
+2026-01-12,PHX,3,Strong
+2026-01-12,POR,4,Very Strong
+2026-01-12,SAC,4,Very Strong
+2026-01-12,SAS,3,Strong
+2026-01-12,TOR,4,Very Strong
+2026-01-12,UTA,4,Very Strong
+2026-01-12,WAS,3,Strong
+2026-01-19,ATL,3,Strong
+2026-01-19,BKN,4,Very Strong
+2026-01-19,BOS,4,Very Strong
+2026-01-19,CHA,3,Strong
+2026-01-19,CHI,3,Strong
+2026-01-19,CLE,4,Very Strong
+2026-01-19,DAL,3,Strong
+2026-01-19,DEN,3,Strong
+2026-01-19,DET,4,Very Strong
+2026-01-19,GSW,4,Very Strong
+2026-01-19,HOU,3,Strong
+2026-01-19,IND,3,Strong
+2026-01-19,LAC,4,Very Strong
+2026-01-19,LAL,3,Strong
+2026-01-19,MEM,2,Weak
+2026-01-19,MIA,5,Very Strong
+2026-01-19,MIL,3,Strong
+2026-01-19,MIN,3,Strong
+2026-01-19,NOP,3,Strong
+2026-01-19,NYK,3,Strong
+2026-01-19,OKC,4,Very Strong
+2026-01-19,ORL,2,Weak
+2026-01-19,PHI,4,Very Strong
+2026-01-19,PHX,4,Very Strong
+2026-01-19,POR,2,Weak
+2026-01-19,SAC,4,Very Strong
+2026-01-19,SAS,4,Very Strong
+2026-01-19,TOR,4,Very Strong
+2026-01-19,UTA,4,Very Strong
+2026-01-19,WAS,3,Strong
+2026-01-26,ATL,4,Very Strong
+2026-01-26,BKN,4,Very Strong
+2026-01-26,BOS,4,Very Strong
+2026-01-26,CHA,4,Very Strong
+2026-01-26,CHI,5,Very Strong
+2026-01-26,CLE,4,Very Strong
+2026-01-26,DAL,3,Strong
+2026-01-26,DEN,4,Very Strong
+2026-01-26,DET,4,Very Strong
+2026-01-26,GSW,3,Strong
+2026-01-26,HOU,4,Very Strong
+2026-01-26,IND,3,Strong
+2026-01-26,LAC,3,Strong
+2026-01-26,LAL,4,Very Strong
+2026-01-26,MEM,4,Very Strong
+2026-01-26,MIA,4,Very Strong
+2026-01-26,MIL,3,Strong
+2026-01-26,MIN,4,Very Strong
+2026-01-26,NOP,3,Strong
+2026-01-26,NYK,4,Very Strong
+2026-01-26,OKC,3,Strong
+2026-01-26,ORL,4,Very Strong
+2026-01-26,PHI,4,Very Strong
+2026-01-26,PHX,4,Very Strong
+2026-01-26,POR,4,Very Strong
+2026-01-26,SAC,4,Very Strong
+2026-01-26,SAS,3,Strong
+2026-01-26,TOR,3,Strong
+2026-01-26,UTA,4,Very Strong
+2026-01-26,WAS,4,Very Strong
+2026-02-02,ATL,3,Strong
+2026-02-02,BKN,3,Strong
+2026-02-02,BOS,4,Very Strong
+2026-02-02,CHA,3,Strong
+2026-02-02,CHI,3,Strong
+2026-02-02,CLE,2,Weak
+2026-02-02,DAL,3,Strong
+2026-02-02,DEN,3,Strong
+2026-02-02,DET,3,Strong
+2026-02-02,GSW,3,Strong
+2026-02-02,HOU,4,Very Strong
+2026-02-02,IND,4,Very Strong
+2026-02-02,LAC,4,Very Strong
+2026-02-02,LAL,3,Strong
+2026-02-02,MEM,4,Very Strong
+2026-02-02,MIA,3,Strong
+2026-02-02,MIL,3,Strong
+2026-02-02,MIN,4,Very Strong
+2026-02-02,NOP,3,Strong
+2026-02-02,NYK,4,Very Strong
+2026-02-02,OKC,3,Strong
+2026-02-02,ORL,3,Strong
+2026-02-02,PHI,4,Very Strong
+2026-02-02,PHX,3,Strong
+2026-02-02,POR,3,Strong
+2026-02-02,SAC,3,Strong
+2026-02-02,SAS,3,Strong
+2026-02-02,TOR,3,Strong
+2026-02-02,UTA,3,Strong
+2026-02-02,WAS,4,Very Strong
+2026-02-09,ATL,2,Weak
+2026-02-09,BKN,2,Weak
+2026-02-09,BOS,1,Very Weak
+2026-02-09,CHA,2,Weak
+2026-02-09,CHI,2,Weak
+2026-02-09,CLE,2,Weak
+2026-02-09,DAL,2,Weak
+2026-02-09,DEN,2,Weak
+2026-02-09,DET,2,Weak
+2026-02-09,GSW,2,Weak
+2026-02-09,HOU,2,Weak
+2026-02-09,IND,2,Weak
+2026-02-09,LAC,2,Weak
+2026-02-09,LAL,3,Strong
+2026-02-09,MEM,2,Weak
+2026-02-09,MIA,2,Weak
+2026-02-09,MIL,3,Strong
+2026-02-09,MIN,2,Weak
+2026-02-09,NOP,2,Weak
+2026-02-09,NYK,2,Weak
+2026-02-09,OKC,3,Strong
+2026-02-09,ORL,2,Weak
+2026-02-09,PHI,2,Weak
+2026-02-09,PHX,2,Weak
+2026-02-09,POR,3,Strong
+2026-02-09,SAC,2,Weak
+2026-02-09,SAS,2,Weak
+2026-02-09,TOR,1,Very Weak
+2026-02-09,UTA,3,Strong
+2026-02-09,WAS,1,Very Weak
+2026-02-16,ATL,3,Strong
+2026-02-16,BKN,3,Strong
+2026-02-16,BOS,2,Weak
+2026-02-16,CHA,3,Strong
+2026-02-16,CHI,3,Strong
+2026-02-16,CLE,3,Strong
+2026-02-16,DAL,2,Weak
+2026-02-16,DEN,3,Strong
+2026-02-16,DET,2,Weak
+2026-02-16,GSW,2,Weak
+2026-02-16,HOU,2,Weak
+2026-02-16,IND,3,Strong
+2026-02-16,LAC,3,Strong
+2026-02-16,LAL,2,Weak
+2026-02-16,MEM,2,Weak
+2026-02-16,MIA,2,Weak
+2026-02-16,MIL,2,Weak
+2026-02-16,MIN,2,Weak
+2026-02-16,NOP,2,Weak
+2026-02-16,NYK,3,Strong
+2026-02-16,OKC,2,Weak
+2026-02-16,ORL,3,Strong
+2026-02-16,PHI,3,Strong
+2026-02-16,PHX,3,Strong
+2026-02-16,POR,2,Weak
+2026-02-16,SAC,2,Weak
+2026-02-16,SAS,2,Weak
+2026-02-16,TOR,2,Weak
+2026-02-16,UTA,1,Very Weak
+2026-02-16,WAS,3,Strong
+2026-02-23,ATL,3,Strong
+2026-02-23,BKN,4,Very Strong
+2026-02-23,BOS,4,Very Strong
+2026-02-23,CHA,3,Strong
+2026-02-23,CHI,3,Strong
+2026-02-23,CLE,4,Very Strong
+2026-02-23,DAL,4,Very Strong
+2026-02-23,DEN,3,Strong
+2026-02-23,DET,4,Very Strong
+2026-02-23,GSW,3,Strong
+2026-02-23,HOU,4,Very Strong
+2026-02-23,IND,3,Strong
+2026-02-23,LAC,2,Weak
+2026-02-23,LAL,4,Very Strong
+2026-02-23,MEM,4,Very Strong
+2026-02-23,MIA,3,Strong
+2026-02-23,MIL,4,Very Strong
+2026-02-23,MIN,3,Strong
+2026-02-23,NOP,4,Very Strong
+2026-02-23,NYK,3,Strong
+2026-02-23,OKC,4,Very Strong
+2026-02-23,ORL,3,Strong
+2026-02-23,PHI,3,Strong
+2026-02-23,PHX,2,Weak
+2026-02-23,POR,4,Very Strong
+2026-02-23,SAC,4,Very Strong
+2026-02-23,SAS,4,Very Strong
+2026-02-23,TOR,3,Strong
+2026-02-23,UTA,3,Strong
+2026-02-23,WAS,3,Strong
+2026-03-02,ATL,2,Weak
+2026-03-02,BKN,3,Strong
+2026-03-02,BOS,4,Very Strong
+2026-03-02,CHA,4,Very Strong
+2026-03-02,CHI,3,Strong
+2026-03-02,CLE,2,Weak
+2026-03-02,DAL,4,Very Strong
+2026-03-02,DEN,3,Strong
+2026-03-02,DET,4,Very Strong
+2026-03-02,GSW,3,Strong
+2026-03-02,HOU,4,Very Strong
+2026-03-02,IND,3,Strong
+2026-03-02,LAC,4,Very Strong
+2026-03-02,LAL,4,Very Strong
+2026-03-02,MEM,3,Strong
+2026-03-02,MIA,4,Very Strong
+2026-03-02,MIL,4,Very Strong
+2026-03-02,MIN,3,Strong
+2026-03-02,NOP,4,Very Strong
+2026-03-02,NYK,4,Very Strong
+2026-03-02,OKC,3,Strong
+2026-03-02,ORL,4,Very Strong
+2026-03-02,PHI,3,Strong
+2026-03-02,PHX,4,Very Strong
+2026-03-02,POR,3,Strong
+2026-03-02,SAC,3,Strong
+2026-03-02,SAS,4,Very Strong
+2026-03-02,TOR,3,Strong
+2026-03-02,UTA,4,Very Strong
+2026-03-02,WAS,4,Very Strong
+2026-03-09,ATL,3,Strong
+2026-03-09,BKN,4,Very Strong
+2026-03-09,BOS,3,Strong
+2026-03-09,CHA,3,Strong
+2026-03-09,CHI,3,Strong
+2026-03-09,CLE,4,Very Strong
+2026-03-09,DAL,4,Very Strong
+2026-03-09,DEN,4,Very Strong
+2026-03-09,DET,4,Very Strong
+2026-03-09,GSW,4,Very Strong
+2026-03-09,HOU,3,Strong
+2026-03-09,IND,4,Very Strong
+2026-03-09,LAC,4,Very Strong
+2026-03-09,LAL,3,Strong
+2026-03-09,MEM,4,Very Strong
+2026-03-09,MIA,3,Strong
+2026-03-09,MIL,4,Very Strong
+2026-03-09,MIN,4,Very Strong
+2026-03-09,NOP,2,Weak
+2026-03-09,NYK,4,Very Strong
+2026-03-09,OKC,3,Strong
+2026-03-09,ORL,3,Strong
+2026-03-09,PHI,5,Very Strong
+2026-03-09,PHX,3,Strong
+2026-03-09,POR,3,Strong
+2026-03-09,SAC,4,Very Strong
+2026-03-09,SAS,3,Strong
+2026-03-09,TOR,4,Very Strong
+2026-03-09,UTA,4,Very Strong
+2026-03-09,WAS,3,Strong
+2026-03-16,ATL,4,Very Strong
+2026-03-16,BKN,4,Very Strong
+2026-03-16,BOS,4,Very Strong
+2026-03-16,CHA,3,Strong
+2026-03-16,CHI,3,Strong
+2026-03-16,CLE,3,Strong
+2026-03-16,DAL,3,Strong
+2026-03-16,DEN,4,Very Strong
+2026-03-16,DET,3,Strong
+2026-03-16,GSW,4,Very Strong
+2026-03-16,HOU,4,Very Strong
+2026-03-16,IND,3,Strong
+2026-03-16,LAC,4,Very Strong
+2026-03-16,LAL,4,Very Strong
+2026-03-16,MEM,4,Very Strong
+2026-03-16,MIA,3,Strong
+2026-03-16,MIL,3,Strong
+2026-03-16,MIN,4,Very Strong
+2026-03-16,NOP,4,Very Strong
+2026-03-16,NYK,3,Strong
+2026-03-16,OKC,3,Strong
+2026-03-16,ORL,4,Very Strong
+2026-03-16,PHI,3,Strong
+2026-03-16,PHX,5,Very Strong
+2026-03-16,POR,4,Very Strong
+2026-03-16,SAC,3,Strong
+2026-03-16,SAS,4,Very Strong
+2026-03-16,TOR,3,Strong
+2026-03-16,UTA,3,Strong
+2026-03-16,WAS,5,Very Strong
+2026-03-23,ATL,4,Very Strong
+2026-03-23,BKN,4,Very Strong
+2026-03-23,BOS,3,Strong
+2026-03-23,CHA,4,Very Strong
+2026-03-23,CHI,4,Very Strong
+2026-03-23,CLE,3,Strong
+2026-03-23,DAL,3,Strong
+2026-03-23,DEN,4,Very Strong
+2026-03-23,DET,4,Very Strong
+2026-03-23,GSW,4,Very Strong
+2026-03-23,HOU,4,Very Strong
+2026-03-23,IND,4,Very Strong
+2026-03-23,LAC,4,Very Strong
+2026-03-23,LAL,3,Strong
+2026-03-23,MEM,4,Very Strong
+2026-03-23,MIA,4,Very Strong
+2026-03-23,MIL,4,Very Strong
+2026-03-23,MIN,2,Weak
+2026-03-23,NOP,4,Very Strong
+2026-03-23,NYK,3,Strong
+2026-03-23,OKC,4,Very Strong
+2026-03-23,ORL,4,Very Strong
+2026-03-23,PHI,3,Strong
+2026-03-23,PHX,2,Weak
+2026-03-23,POR,4,Very Strong
+2026-03-23,SAC,4,Very Strong
+2026-03-23,SAS,3,Strong
+2026-03-23,TOR,4,Very Strong
+2026-03-23,UTA,4,Very Strong
+2026-03-23,WAS,3,Strong
+2026-03-30,ATL,3,Strong
+2026-03-30,BKN,3,Strong
+2026-03-30,BOS,4,Very Strong
+2026-03-30,CHA,4,Very Strong
+2026-03-30,CHI,4,Very Strong
+2026-03-30,CLE,4,Very Strong
+2026-03-30,DAL,4,Very Strong
+2026-03-30,DEN,2,Weak
+2026-03-30,DET,4,Very Strong
+2026-03-30,GSW,3,Strong
+2026-03-30,HOU,4,Very Strong
+2026-03-30,IND,3,Strong
+2026-03-30,LAC,3,Strong
+2026-03-30,LAL,4,Very Strong
+2026-03-30,MEM,4,Very Strong
+2026-03-30,MIA,3,Strong
+2026-03-30,MIL,4,Very Strong
+2026-03-30,MIN,4,Very Strong
+2026-03-30,NOP,3,Strong
+2026-03-30,NYK,3,Strong
+2026-03-30,OKC,3,Strong
+2026-03-30,ORL,4,Very Strong
+2026-03-30,PHI,4,Very Strong
+2026-03-30,PHX,4,Very Strong
+2026-03-30,POR,2,Weak
+2026-03-30,SAC,3,Strong
+2026-03-30,SAS,4,Very Strong
+2026-03-30,TOR,4,Very Strong
+2026-03-30,UTA,4,Very Strong
+2026-03-30,WAS,4,Very Strong
+2026-04-06,ATL,4,Very Strong
+2026-04-06,BKN,4,Very Strong
+2026-04-06,BOS,4,Very Strong
+2026-04-06,CHA,3,Strong
+2026-04-06,CHI,4,Very Strong
+2026-04-06,CLE,4,Very Strong
+2026-04-06,DAL,4,Very Strong
+2026-04-06,DEN,4,Very Strong
+2026-04-06,DET,4,Very Strong
+2026-04-06,GSW,4,Very Strong
+2026-04-06,HOU,4,Very Strong
+2026-04-06,IND,4,Very Strong
+2026-04-06,LAC,4,Very Strong
+2026-04-06,LAL,4,Very Strong
+2026-04-06,MEM,4,Very Strong
+2026-04-06,MIA,4,Very Strong
+2026-04-06,MIL,4,Very Strong
+2026-04-06,MIN,4,Very Strong
+2026-04-06,NOP,3,Strong
+2026-04-06,NYK,4,Very Strong
+2026-04-06,OKC,4,Very Strong
+2026-04-06,ORL,4,Very Strong
+2026-04-06,PHI,4,Very Strong
+2026-04-06,PHX,4,Very Strong
+2026-04-06,POR,4,Very Strong
+2026-04-06,SAC,3,Strong
+2026-04-06,SAS,4,Very Strong
+2026-04-06,TOR,4,Very Strong
+2026-04-06,UTA,3,Strong
+2026-04-06,WAS,4,Very Strong
