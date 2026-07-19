@@ -7,9 +7,12 @@ to the data/raw directory.
 """
 
 import pandas as pd
+from utils.paths import RAW_DATA
 
 # Load the CSV we created
-player_data = pd.read_csv("../../data/raw/players.csv")
+player_data = pd.read_csv(
+      RAW_DATA / "players.csv"
+)
 
 print("=== Dataset Info ===")
 print(player_data.info())
@@ -41,11 +44,7 @@ print("\n=== Active Player Sample ===")
 print(active_players.head())
 
 # Save active players
-from pathlib import Path
-
-project_root = Path(__file__).resolve().parents[2]
-
-output_path = project_root / "data" / "raw" / "active_players.csv"
+output_path = RAW_DATA / "active_players.csv"
 
 active_players.to_csv(output_path, index=False)
 

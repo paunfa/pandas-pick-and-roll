@@ -64,19 +64,12 @@ print(game_data[[
     "OPPONENT"
 ]].head(10))
 
-# print(df[["GAME_DATE", "TEAM_ABBREVIATION", "MATCHUP"]].head(20))
-# print()
-# print(df.columns)
-# print()
-# print(f"Rows: {len(df)}")
-# print()
-# print(df["MATCHUP"].head(10))
 
-from pathlib import Path
 
-project_root = Path(__file__).resolve().parents[2]
 
-output_path = project_root / "data" / "raw" / "team_game_logs.csv"
+from utils.paths import RAW_DATA
+
+output_path = RAW_DATA / "team_game_logs.csv"
 
 game_data.to_csv(output_path, index=False)
 

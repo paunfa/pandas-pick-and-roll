@@ -8,15 +8,11 @@ the amount of games played that week.
 """
 
 import pandas as pd
-from pathlib import Path
+from utils.paths import RAW_DATA, PROCESSED_DATA
 
-
-project_root = Path(__file__).resolve().parents[2]
-
-input_path = project_root / "data" / "raw" / "team_game_logs.csv"
-
-# Convert game dates to datetime data type
-team_game_logs = pd.read_csv(input_path)
+team_game_logs = pd.read_csv(
+    RAW_DATA / "team_game_logs.csv"
+)
 team_game_logs["GAME_DATE"] = pd.to_datetime(
     team_game_logs["GAME_DATE"]
 )
@@ -46,7 +42,7 @@ games_by_team = (
     .reset_index(name="TOTAL_GAMES")
 )
 
-output_path = project_root / "data" / "processed" / "games_by_team.csv"
+output_path = PROCESSED_DATA / "games_by_team.csv"
 
 games_by_team.to_csv(output_path, index=False)
 
@@ -102,7 +98,7 @@ weekly_schedule["SCHEDULE_RATING"] = (
 print(weekly_schedule.head(30))
 
 
-output_path = project_root / "data" / "processed" / "weekly_schedule.csv"
+output_path = PROCESSED_DATA / "weekly_schedule.csv"
 
 weekly_schedule.to_csv(output_path, index=False)
 

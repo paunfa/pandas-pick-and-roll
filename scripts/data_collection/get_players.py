@@ -19,14 +19,13 @@ all_players = pd.DataFrame(nba_players)
 print(all_players.head())
 
 # Save the data
-from pathlib import Path
+from utils.paths import RAW_DATA
 
-project_root = Path(__file__).resolve().parents[2]
-
-output_path = project_root / "data" / "raw" / "players.csv"
+output_path = RAW_DATA / "players.csv"
 
 all_players.to_csv(output_path, index=False)
 
 print("\n======================================"
       f"\nSuccessfully downloaded {len(all_players)} players!"
+      f"\nList of players saved to: {output_path}"
       "\n======================================")
