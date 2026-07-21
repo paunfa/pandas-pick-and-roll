@@ -4,6 +4,9 @@ Reads collected NBA player data and analyzes it.
 This script takes data from our players.csv file (made from the NBA Stats API)
 and executes basic search functions.  Saves a list of currently active players
 to the data/raw directory.
+
+Creates:
+      data/raw/active_players.csv
 """
 
 import pandas as pd

@@ -50,3 +50,12 @@ Schedule categories:
 - 3 games: Strong
 - 2 games: Weak
 - 1 game or less: Very Weak
+
+## Day 3 Completed Features
+### Per-Team Rest Day Analysis
+
+Features added:
+- Player data collection
+- Weekly schedule analysis
+- Team rest analysis
+- Back-to-back detection

@@ -4,6 +4,9 @@ Download team game logs from the NBA Stats API.
 This script retrieves all regular season team game logs for a specified season,
 engineers basic schedule features, and saves the raw dataset to the data/raw
 directory.
+
+Creates:
+    data/raw/team_game_logs.csv
 """
 
 

@@ -3,6 +3,9 @@ Download player data from the NBA Stats API.
 
 This script retrieves player data for all NBA players - active or inactive.
 Stores collected data in a data frame and saves to the data/raw directory.
+
+Creates:
+      data/raw/players.csv
 """
 
 

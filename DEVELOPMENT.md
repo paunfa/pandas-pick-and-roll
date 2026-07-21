@@ -183,6 +183,7 @@ Changes
 * Power BI dashboard
 
 ---
+# DEV DIARY
 
 ## Day 2: Weekly Schedule Analytics Pipeline
 
@@ -202,4 +203,10 @@ Git concepts learned:
 - Branch merging
 - Default branch management
 
----
+## Day 3: Per-Team Rest Day Analysis
+
+- Introduced a new utils/path.py script.
+  - Streamlined the usage of file paths by consolidating project root directories.
+- Practiced clear data organization by differentiating between "DAYS_BETWEEN_GAMES" and "REST_DAYS"
+- FINALLY stopped saving every intermediate output to be more efficient with our space.
+  - Intermediate outputs are also very easily replicable.

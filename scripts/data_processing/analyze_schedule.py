@@ -5,6 +5,10 @@ Retrieves game data and converts game dates to datetime data type.
 Using datetime, determines the start date of any given fantasy week.
 Assigns a strength rating for each team during the week based on
 the amount of games played that week.
+
+Creates:
+    data/processed/weekly_schedule.csv
+    data/processed/games_by_team.csv
 """
 
 import pandas as pd
