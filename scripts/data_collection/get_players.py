@@ -12,23 +12,29 @@ Creates:
 from nba_api.stats.static import players
 import pandas as pd
 
-# Download all NBA players
-nba_players = players.get_players()
+def get_players():
 
-# Convert to a DataFrame
-all_players = pd.DataFrame(nba_players)
+      print("Obtaining list of NBA players...")
+      # Download all NBA players
+      nba_players = players.get_players()
 
-# Display the first few rows
-print(all_players.head())
+      # Convert to a DataFrame
+      all_players = pd.DataFrame(nba_players)
 
-# Save the data
-from utils.paths import RAW_DATA
+      # Save the data
+      from utils.paths import RAW_DATA
 
-output_path = RAW_DATA / "players.csv"
+      output_path = RAW_DATA / "players.csv"
 
-all_players.to_csv(output_path, index=False)
+      all_players.to_csv(output_path, index=False)
 
-print("\n======================================"
-      f"\nSuccessfully downloaded {len(all_players)} players!"
-      f"\nList of players saved to: {output_path}"
-      "\n======================================")
+      print("\n======================================"
+            f"\nSuccessfully downloaded {len(all_players)} players!"
+            f"\nList of players saved to: {output_path}"
+            "\n======================================")
+
+def main():
+      get_players()
+
+if __name__ == "__main__":
+      main()

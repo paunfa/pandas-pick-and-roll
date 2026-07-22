@@ -14,7 +14,10 @@ import pandas as pd
 from utils.paths import RAW_DATA, PROCESSED_DATA
 
 
-def main():
+def analyze_rest():
+
+    print("Analyzing rest day data...")
+
     # Retrieve already collected game data
     team_game_logs = pd.read_csv(
         RAW_DATA / "team_game_logs.csv"
@@ -74,10 +77,14 @@ def main():
 
     team_rest_summary.to_csv(output_path, index=False)
 
-    print(f"====================================="
+    print(f"\n====================================="
           f"\nSuccessfully saved rest day summaries for every team."
           f"\n Saved to: {output_path}"
           f"\n=====================================")
+
+
+def main():
+    analyze_rest()
 
 if __name__ == "__main__":
     main()

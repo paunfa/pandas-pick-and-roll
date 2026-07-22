@@ -205,8 +205,18 @@ Git concepts learned:
 
 ## Day 3: Per-Team Rest Day Analysis
 
-- Introduced a new utils/path.py script.
-  - Streamlined the usage of file paths by consolidating project root directories.
-- Practiced clear data organization by differentiating between "DAYS_BETWEEN_GAMES" and "REST_DAYS"
-- FINALLY stopped saving every intermediate output to be more efficient with our space.
-  - Intermediate outputs are also very easily replicable.
+### Completed
+
+- Added shared path utilities
+- Built rest analysis pipeline
+- Calculated days between games
+- Calculated actual rest days
+- Detected back-to-back games
+- Created team rest summary dataset
+
+### Design Decisions
+
+- Kept raw game logs separate from processed analytics outputs
+- FINALLY stopped saving intermediate outputs to be more efficient with our space
+  - Saved team-level summaries instead of duplicate game-level datasets
+- Distinguished calendar gaps from actual rest days
