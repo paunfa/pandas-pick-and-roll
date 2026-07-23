@@ -6,7 +6,7 @@ engineers basic schedule features, and saves the raw dataset to the data/raw
 directory.
 
 Creates:
-    data/raw/team_game_logs.csv
+    data/raw/team_game_logs_raw.csv
 """
 
 
@@ -63,7 +63,7 @@ def get_schedule():
 
 
 
-    output_path = RAW_DATA / "team_game_logs.csv"
+    output_path = RAW_DATA / "team_game_logs_raw.csv"
 
     game_data.to_csv(output_path, index=False)
 

@@ -8,47 +8,15 @@ the amount of games played that week.
 
 Creates:
     data/processed/weekly_schedule.csv
-    data/processed/team_schedule_clean.csv
 """
 
 import pandas as pd
-from utils.paths import RAW_DATA, PROCESSED_DATA
+from utils.paths import PROCESSED_DATA, PROCESSED_TEAM_GAME_LOGS_PATH
 
-team_game_logs = pd.read_csv(
-        RAW_DATA / "team_game_logs.csv"
-    )
+team_game_logs = pd.read_csv(PROCESSED_TEAM_GAME_LOGS_PATH)
 team_game_logs["GAME_DATE"] = pd.to_datetime(
     team_game_logs["GAME_DATE"]
 )
-
-def team_schedule():
-
-    print("Verifying games played per team...")
-
-    # Find the start date of each week for any given game
-    team_game_logs["WEEK_START"] = (
-        team_game_logs["GAME_DATE"]
-        - pd.to_timedelta(team_game_logs["GAME_DATE"].dt.weekday, unit="D")
-    )
-
-
-    # Find total games played for each team
-    games_by_team = (
-        team_game_logs
-        .groupby("TEAM_ABBREVIATION")
-        .size()
-        .reset_index(name="TOTAL_GAMES")
-    )
-
-    output_path = PROCESSED_DATA / "team_schedule_clean.csv"
-
-    games_by_team.to_csv(output_path, index=False)
-
-    print(f"\n====================================="
-          f"\nSuccessfully verified amount of games played per team."
-          f"\nSaved to:  {output_path}"
-          f"\n====================================\n")
-
 
 def week_schedule():
 
@@ -110,7 +78,6 @@ def week_schedule():
 
 
 def main():
-    team_schedule()
     week_schedule()
 
 if __name__ == "__main__":

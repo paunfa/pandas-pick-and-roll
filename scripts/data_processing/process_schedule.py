@@ -1,17 +1,30 @@
 """
-Analyze team rest and back-to-back schedules.
+Reads raw NBA schedule data
+Creates schedule context
+Calculates:
+    DAYS_BETWEEN_GAMES
+    REST_DAYS
+    BACK_TO_BACK
+    WEEK_START
+Saves the processed game-level schedule dataset
+Creates the team rest summary
 
 Takes game data from team_game_logs and calculates rest days for each team.
 Determines amount of back-to-backs as well as average, min, and max rest
 days for each team.
 
 Creates:
+    data/processed/team_game_logs_pro.csv
     data/processed/team_rest_summary.csv
 """
 
 import pandas as pd
 
-from utils.paths import RAW_DATA, PROCESSED_DATA
+from utils.paths import (
+    RAW_TEAM_GAME_LOGS_PATH,
+    PROCESSED_TEAM_GAME_LOGS_PATH,
+    TEAM_REST_SUMMARY_PATH
+)
 
 
 def analyze_rest():
@@ -19,9 +32,7 @@ def analyze_rest():
     print("Analyzing rest day data...")
 
     # Retrieve already collected game data
-    team_game_logs = pd.read_csv(
-        RAW_DATA / "team_game_logs.csv"
-    )
+    team_game_logs = pd.read_csv(RAW_TEAM_GAME_LOGS_PATH)
 
     # Convert game date data type from str to datetime to enable calculation
     team_game_logs["GAME_DATE"] = pd.to_datetime(
@@ -34,6 +45,12 @@ def analyze_rest():
             "TEAM_ABBREVIATION",
             "GAME_DATE"
         ]
+    )
+
+    # Find the start date of each week for any given game
+    team_game_logs["WEEK_START"] = (
+        team_game_logs["GAME_DATE"]
+        - pd.to_timedelta(team_game_logs["GAME_DATE"].dt.weekday, unit="D")
     )
 
     # Find the amount of days between any given team's current game and their last game
@@ -54,6 +71,18 @@ def analyze_rest():
         team_game_logs["REST_DAYS"] == 0
     )
 
+    output_path = PROCESSED_TEAM_GAME_LOGS_PATH
+
+    team_game_logs.to_csv(
+        output_path,
+        index=False
+    )
+
+    print(f"\n========================================="
+          f"\nSuccessfully updated team game logs with rest day data."
+          f"\nSaved to: {output_path}"
+          f"\n=========================================")
+
     # Create a table containing the amount of back-to-backs, average rest days, and min/max rest day amounts for each team
     team_rest_summary = (
         team_game_logs
@@ -73,7 +102,7 @@ def analyze_rest():
     )
 
     # Save summary
-    output_path = PROCESSED_DATA / "team_rest_summary.csv"
+    output_path = TEAM_REST_SUMMARY_PATH
 
     team_rest_summary.to_csv(output_path, index=False)
 
