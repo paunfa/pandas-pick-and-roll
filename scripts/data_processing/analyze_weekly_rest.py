@@ -29,7 +29,6 @@ def analyze_weekly_rest():
             ]
         )
         .agg(
-            GAMES_THIS_WEEK=("GAME_ID", "count"),
             BACK_TO_BACKS=("BACK_TO_BACK", "sum"),
             AVERAGE_REST=("REST_DAYS", "mean"),
             MIN_REST=("REST_DAYS", "min"),

@@ -25,6 +25,8 @@ fantasy-streaming-assistant/
 │
 ├── dashboard/
 ├── sql/
+├── utils/
+|
 ├── README.md
 ├── DEVELOPMENT.md
 └── requirements.txt
@@ -129,9 +131,9 @@ Data Processing
         ↓
 Feature Engineering
         ↓
-Weekly Schedule Analytics
+Analytics Models
         ↓
-Streaming Score (Coming Soon)        
+Streaming Score  
         ↓
 Power BI Dashboard
 ```
@@ -220,3 +222,52 @@ Git concepts learned:
 - FINALLY stopped saving intermediate outputs to be more efficient with our space
   - Saved team-level summaries instead of duplicate game-level datasets
 - Distinguished calendar gaps from actual rest days
+
+## Day 4: Code Quality Refactoring and Weekly Schedule Advantage Score
+
+- Added main() functions to all project scripts.
+- Removed unnecessary debug print statements.
+- Standardized script structure across the project.
+- Removed redundant games_by_team.csv dataset.
+- Renamed schedule datasets for clearer raw/processed separation:
+  - team_game_logs_raw.csv
+  - team_game_logs_pro.csv
+- Updated utils/paths.py with centralized file path constants.
+  
+### Data Pipeline
+
+Current schedule pipeline:
+```
+NBA API
+    ↓
+get_schedule.py
+    ↓
+team_game_logs_raw.csv
+    ↓
+process_schedule.py
+    ↓
+team_game_logs_pro.csv
+    ├── weekly_schedule.csv
+    ├── team_rest_summary.csv
+    ├── weekly_rest_summary.csv
+    └── schedule_advantage.csv
+```
+
+### Schedule Advantage Model (Version 1)
+
+- Inputs:
+
+  - weekly_schedule.csv
+  - weekly_rest_summary.csv
+
+- Scoring Components:
+
+  - Game Score
+  - Rest Score
+  - Back-to-Back Penalty
+
+- Output:
+
+  - schedule_advantage.csv
+
+* Version 1 intentionally uses transparent scoring rules to support debugging, explainability, and future model tuning.
