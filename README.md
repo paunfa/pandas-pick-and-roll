@@ -26,6 +26,12 @@ Help fantasy basketball managers identify the best waiver-wire pickups and strea
 - ✅ Historical schedule pipeline
 - 🚧 Streaming Score model
 - ⏳ Power BI dashboard
+
+## Completed Analytics Features
+
+- ✅ Weekly Schedule Advantage Analysis
+- ✅ Team Rest & Back-to-Back Analysis
+- ✅ Schedule Advantage Scoring Model (Version 1)
 ---
 ## Day 1 Completed Features
 - Set up Python environment

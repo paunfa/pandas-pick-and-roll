@@ -228,7 +228,9 @@ Git concepts learned:
 - Added main() functions to all project scripts.
 - Removed unnecessary debug print statements.
 - Standardized script structure across the project.
-- Removed redundant games_by_team.csv dataset.
+- Removed `games_by_team.csv` because it duplicated information already available in the processed schedule pipeline.
+
+  - The project now prioritizes analytical outputs over intermediate aggregations that do not create additional decision-making value.
 - Renamed schedule datasets for clearer raw/processed separation:
   - team_game_logs_raw.csv
   - team_game_logs_pro.csv
