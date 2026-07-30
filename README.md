@@ -32,6 +32,8 @@ Help fantasy basketball managers identify the best waiver-wire pickups and strea
 - ✅ Weekly Schedule Advantage Analysis
 - ✅ Team Rest & Back-to-Back Analysis
 - ✅ Schedule Advantage Scoring Model (Version 1)
+- ✅ Recent Player Production
+
 ---
 ## Day 1 Completed Features
 - Set up Python environment
@@ -95,3 +97,20 @@ Features added:
   - REST_SCORE
   - B2B_PENALTY
   - SCHEDULE_ADVANTAGE
+
+---
+
+## Day 5 Completed Features
+
+### Recent Player Production
+
+Built a player analytics pipeline that:
+
+- Collects NBA player game logs using the NBA API.
+- Processes raw game logs into a clean analytics dataset.
+- Calculates rolling five-game averages for:
+  - Points
+  - Rebounds
+  - Assists
+  - Minutes
+- Produces `player_recent_production.csv` for downstream fantasy analytics.

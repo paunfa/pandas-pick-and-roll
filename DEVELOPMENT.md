@@ -273,3 +273,30 @@ team_game_logs_pro.csv
   - schedule_advantage.csv
 
 * Version 1 intentionally uses transparent scoring rules to support debugging, explainability, and future model tuning.
+
+## Day 5: Recent Player Production
+
+### Recent Player Production (v1)
+
+Created a complete player analytics pipeline.
+
+Data Collection:
+- get_player_game_logs.py
+
+Processing:
+- process_player_game_logs.py
+
+Feature Engineering:
+- analyze_player_production.py
+
+Outputs:
+- player_game_logs_raw.csv
+- player_game_logs_pro.csv
+- player_recent_production.csv
+- 
+## Lessons Learned
+
+- Use `groupby().tail(n)` to isolate each player's most recent games.
+- Separate data processing from feature engineering.
+- Validate intermediate datasets before creating downstream features.
+- Maintain descriptive variable names and consistent project structure.
