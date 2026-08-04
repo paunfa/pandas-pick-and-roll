@@ -177,12 +177,19 @@ Changes
 ### In Progress
 * Weekly schedule advantage tracker
 
-### Future
-* Fantasy production model
-* Minutes trend analysis
-* Injury opportunity scoring
-* Streaming Score engine
-* Power BI dashboard
+### Technical Debt
+
+Data Collection 
+* Add retry logic for nba_api requests
+* Add request throttling (time.sleep)
+* Continue collection after individual player failures
+* Log failed player IDs
+
+Future Feature Engineering
+* Configurable fantasy scoring systems
+* Fantasy Production Score
+* Minutes Trend Score
+* Injury Opportunity Score
 
 ---
 # DEV DIARY
@@ -293,10 +300,31 @@ Outputs:
 - player_game_logs_raw.csv
 - player_game_logs_pro.csv
 - player_recent_production.csv
-- 
-## Lessons Learned
+
+### Lessons Learned
 
 - Use `groupby().tail(n)` to isolate each player's most recent games.
 - Separate data processing from feature engineering.
 - Validate intermediate datasets before creating downstream features.
 - Maintain descriptive variable names and consistent project structure.
+
+## Day 6: Recent Player Production v2
+
+- Refactored production aggregation into reusable helper function:
+    calculate_recent_production()
+
+- Added rolling 10-game production analysis
+
+- Added games played counts for each rolling window
+
+- Merged 5-game and 10-game summaries into a unified
+  player_recent_production.csv dataset
+
+- Improved variable naming consistency
+
+- Added function type hints and documentation
+
+## Day 7: Fantasy Production Foundation
+- Created config/fantasy_scoring.py to centralize fantasy scoring configurations.
+- Chose a dictionary-based configuration approach to allow scoring systems to be passed into reusable calculation functions.
+- Planned a reusable fantasy point utility that will consume scoring dictionaries and produce fantasy point totals independent of league format.

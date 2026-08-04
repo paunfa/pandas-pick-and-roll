@@ -34,7 +34,7 @@ def calculate_recent_production(
             prefix: Prefix used when naming output columns.
 
         Returns:
-            DataFrame containing average points, rebounds, assists,
+            DataFrame containing games played, average points, rebounds, assists,
             and minutes for each player.
         """
 

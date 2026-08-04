@@ -113,4 +113,33 @@ Built a player analytics pipeline that:
   - Rebounds
   - Assists
   - Minutes
-- Produces `player_recent_production.csv` for downstream fantasy analytics.
+- Produces `player_recent_production.csv` for downstream fantasy analytcs.
+
+---
+## Day 6 Completed Features
+### Recent Player Production v2
+
+The Recent Player Production pipeline has been expanded to analyze both short-term and medium-term player performance trends.
+
+New features include:
+- Last 5-game averages
+- Last 10-game averages
+- Games included in each sample
+- Reusable aggregation helper for production metrics
+
+Current production metrics:
+- Average Points (PPG)
+- Average Rebounds (RPG)
+- Average Assists (APG)
+- Average Minutes (MPG)
+
+Output:
+data/processed/player_recent_production.csv
+
+---
+
+## Day 7 Completed Features
+
+* Added a configurable fantasy scoring system.
+* Introduced a config package to separate league scoring rules from analytics logic.
+* Established the foundation for supporting Yahoo, ESPN, and custom fantasy league scoring.
