@@ -54,6 +54,7 @@ def calculate_recent_production(
                 f"{prefix}_AVG_RPG": ("REB", "mean"),
                 f"{prefix}_AVG_APG": ("AST", "mean"),
                 f"{prefix}_AVG_MPG": ("MIN", "mean"),
+                f"{prefix}_AVG_FANTASY_PTS": ("FANTASY_POINTS", "mean"),
             }
         )
         .round(1)

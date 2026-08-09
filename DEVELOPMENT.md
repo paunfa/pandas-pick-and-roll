@@ -167,29 +167,112 @@ Changes
 
 ---
 
+# Fantasy Scoring Design Decisions
+
+Fantasy points are calculated at the individual game level before recent
+production averages are calculated.
+
+Per-game fantasy points are calculated using vectorized pandas operations
+rather than row-wise `DataFrame.apply()`.
+
+The reusable `calculate_fantasy_points()` utility remains available for
+individual stat-line calculations, testing, and validation, while the
+production pipeline uses vectorized calculations for efficiency.
+
+---
+
 # Current Development Goals
 
 ### Completed
+
+#### Data Collection
+
 * NBA player data collection
 * Active player dataset
 * Team game log collection
+* Player game log collection
+
+#### Data Processing
+
+* Team game log processing
+* Player game log processing
+* Player game log deduplication and chronological sorting
+
+#### Schedule Analytics
+
+* Weekly schedule analytics
+* Team rest analysis
+* Schedule Advantage model
+
+#### Player Analytics
+
+* Recent Player Production v1
+* Recent Player Production v2
+* Last 5-game production averages
+* Last 10-game production averages
+* Games played within each rolling window
+
+#### Fantasy Production
+
+* Configurable fantasy scoring architecture
+* Initial Yahoo Fantasy scoring configuration
+* Reusable fantasy point calculation utility
+* Per-game fantasy point calculation
+* Last 5-game average fantasy points
+* Last 10-game average fantasy points
 
 ### In Progress
-* Weekly schedule advantage tracker
+
+#### Per-Game Fantasy Tracking
+
+* Continue expanding the fantasy production foundation
+* Develop additional fantasy-relevant player production metrics
+* Prepare fantasy production features for integration into the Streaming Score
 
 ### Technical Debt
 
-Data Collection 
-* Add retry logic for nba_api requests
-* Add request throttling (time.sleep)
+#### Data Collection
+
+* Add retry logic for `nba_api` requests
+* Add request throttling (`time.sleep`)
 * Continue collection after individual player failures
 * Log failed player IDs
 
-Future Feature Engineering
-* Configurable fantasy scoring systems
+#### Testing
+
+* Add automated tests for fantasy scoring calculations
+* Add validation for scoring configurations
+* Expand test coverage for player production calculations
+
+#### Configuration
+
+* Complete ESPN scoring configuration
+* Implement custom league scoring configuration
+* Add validation for configurable scoring dictionaries
+
+### Future Feature Engineering
+
+The immediate goal is to complete the points-based, per-game fantasy tracking system before expanding into additional fantasy formats.
+
+Planned features include:
+
 * Fantasy Production Score
 * Minutes Trend Score
 * Injury Opportunity Score
+* Streaming Score
+
+### Long-Term Fantasy Goals
+
+After the initial Pick & Roll project is fully developed, prioritize long-term support for 9-category (9-cat) fantasy basketball analysis.
+
+Potential future expansion includes:
+
+* 9-cat category analysis
+* Category-specific player strengths and weaknesses
+* Z-score based player evaluation
+* Punt-category analysis
+* 9-cat waiver and streaming recommendations
+
 
 ---
 # DEV DIARY
@@ -328,3 +411,35 @@ Outputs:
 - Created config/fantasy_scoring.py to centralize fantasy scoring configurations.
 - Chose a dictionary-based configuration approach to allow scoring systems to be passed into reusable calculation functions.
 - Planned a reusable fantasy point utility that will consume scoring dictionaries and produce fantasy point totals independent of league format.
+
+
+
+The project currently supports configurable points-based fantasy scoring.
+
+The fantasy production pipeline follows this structure:
+
+```
+Player Game Logs
+        ↓
+Processed Player Game Logs
+        ↓
+Fantasy Scoring Configuration
+        ↓
+Per-Game Fantasy Points
+        ↓
+Recent Player Production
+        ↓
+Last 5 / Last 10 Fantasy Averages
+```
+
+The initial scoring configuration is based on Yahoo Fantasy points scoring.
+
+Fantasy scoring is separated from the calculation logic through configurable
+scoring dictionaries, allowing future support for ESPN and custom league
+formats without changing the underlying fantasy point calculation logic.
+
+Current fantasy production features include:
+
+- `FANTASY_POINTS`
+- `LAST_FIVE_AVG_FANTASY_PTS`
+- `LAST_TEN_AVG_FANTASY_PTS`
