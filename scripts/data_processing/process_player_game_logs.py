@@ -17,6 +17,7 @@
 
 import pandas as pd
 from utils.paths import RAW_PLAYER_GAME_LOGS_PATH, PROCESSED_PLAYER_GAME_LOGS_PATH
+from config.scoring import YAHOO_SCORING
 
 def process_player_game_logs():
 
@@ -40,6 +41,12 @@ def process_player_game_logs():
 
     # Remove duplicate rows in the dataframe (if any)
     player_game_logs = player_game_logs.drop_duplicates()
+
+    # Create FANTASY_POINTS column for individual games
+    player_game_logs["FANTASY_POINTS"] = sum(
+        player_game_logs[stat] * weight
+        for stat, weight in YAHOO_SCORING.items()
+    )
 
     # Save to processed data folder
     output_path = PROCESSED_PLAYER_GAME_LOGS_PATH

@@ -32,7 +32,8 @@ Help fantasy basketball managers identify the best waiver-wire pickups and strea
 - ✅ Weekly Schedule Advantage Analysis
 - ✅ Team Rest & Back-to-Back Analysis
 - ✅ Schedule Advantage Scoring Model (Version 1)
-- ✅ Recent Player Production
+- ✅ Raw Recent Player Production
+- ✅ Recent Player Fantasy Scores
 
 ---
 ## Day 1 Completed Features
@@ -140,6 +141,13 @@ data/processed/player_recent_production.csv
 
 ## Day 7 Completed Features
 
-* Added a configurable fantasy scoring system.
+### Configurable Fantasy Scoring System
+  - Configurable fantasy scoring framework
+  - Yahoo Fantasy scoring configuration
+  - Per-game fantasy point calculation
+  - Recent fantasy production using:
+    - Last 5 games
+    - Last 10 games
+  - Fantasy points integrated into the player production pipeline
 * Introduced a config package to separate league scoring rules from analytics logic.
 * Established the foundation for supporting Yahoo, ESPN, and custom fantasy league scoring.
