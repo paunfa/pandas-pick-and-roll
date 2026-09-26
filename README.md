@@ -1,153 +1,141 @@
 # Pandas Pick & Roll
 ### An NBA Fantasy Streaming Assistant
 
-A fantasy basketball analytics project built with Python and Power BI.
+Pandas Pick & Roll is a fantasy basketball analytics project built with **Python, pandas, and Power BI**.
+
+The project analyzes NBA schedule data and recent player performance to help fantasy basketball managers identify potential **waiver-wire pickups and streaming opportunities**.
 
 ## Goal
 
-Help fantasy basketball managers identify the best waiver-wire pickups and streaming opportunities using NBA schedule and player performance data.
+Build a data-driven fantasy basketball decision system that combines:
 
-## Tools
+- NBA schedule analysis
+- Recent player performance
+- Fantasy production
+- Minutes trends
+- Injury-related opportunity
 
-- Python
-- pandas
-- nba_api
-- Power BI
-- GitHub
+The long-term goal is to combine these factors into a **Streaming Score** that can be used to identify and compare potential fantasy streaming options.
 
+## Technology
 
+- **Python** — Data collection, processing, and analytics
+- **pandas** — Data manipulation and feature engineering
+- **nba_api** — NBA data collection
+- **Power BI** — Planned visualization and dashboard
+- **Git / GitHub** — Version control and project management
 
+## Project Architecture
 
-# Progress Log
+The project is organized into several stages:
 
-## Current Progress
+**Data Collection → Raw Data → Data Processing → Feature Engineering → Fantasy Analytics → Streaming Score → Power BI Dashboard**
 
-- ✅ Player data pipeline
-- ✅ Historical schedule pipeline
-- 🚧 Streaming Score model
-- ⏳ Power BI dashboard
+This separation allows raw NBA data to be collected independently from the analytics and scoring logic built on top of it.
 
-## Completed Analytics Features
+## Current Features
 
-- ✅ Weekly Schedule Advantage Analysis
-- ✅ Team Rest & Back-to-Back Analysis
-- ✅ Schedule Advantage Scoring Model (Version 1)
-- ✅ Raw Recent Player Production
-- ✅ Recent Player Fantasy Scores
+### NBA Schedule Analytics
 
----
-## Day 1 Completed Features
-- Set up Python environment
-- Created Git repository
-- Built NBA player data pipeline
-- Added initial data exploration scripts
----
-## Day 2 Completed Features
+The schedule analytics pipeline currently supports:
 
-### Weekly Schedule Advantage Tracker
-
-The dashboard now includes a historical NBA schedule pipeline.
-
-Current capabilities:
-- Collect NBA team game logs
-- Organize games by fantasy week
-- Calculate games played per team
-- Classify schedule strength
-
-Schedule categories:
-- 4+ games: Very Strong
-- 3 games: Strong
-- 2 games: Weak
-- 1 game or less: Very Weak
----
-## Day 3 Completed Features
-### Per-Team Rest Day Analysis
-
-Features added:
-- Player data collection
-- Weekly schedule analysis
-- Team rest analysis
+- NBA team game-log collection
+- Fantasy-week organization
+- Games played per team
+- Team rest-day analysis
 - Back-to-back detection
----
-## Day 4 Completed Features
-### Schedule Processing Pipeline
-- Separated raw and processed schedule data.
-- Introduced team_game_logs_raw.csv and team_game_logs_pro.csv.
-- Standardized the schedule processing pipeline for downstream analytics.
+- Weekly rest summaries
+- Schedule advantage scoring
 
-### Weekly Rest Analysis
-- Added weekly rest aggregation by fantasy week.
-- Calculated:
-  - Back-to-backs
-  - Average rest days
-  - Minimum rest
-  - Maximum rest
-  - Generated weekly_rest_summary.csv.
-    
-### Schedule Advantage Model (Version 1)
+The Schedule Advantage model currently considers:
 
-- Implemented the first fantasy decision model by combining:
+- **Game volume**
+- **Rest advantage**
+- **Back-to-back penalties**
 
-  - Weekly game volume
-  - Rest advantage
-  - Back-to-back penalties
-
-- Created schedule_advantage.csv containing:
-
-  - GAME_SCORE
-  - REST_SCORE
-  - B2B_PENALTY
-  - SCHEDULE_ADVANTAGE
-
----
-
-## Day 5 Completed Features
+The resulting schedule analytics are stored in processed datasets for use by downstream fantasy analysis.
 
 ### Recent Player Production
 
-Built a player analytics pipeline that:
+The player production pipeline collects and processes NBA player game logs and calculates recent performance metrics.
 
-- Collects NBA player game logs using the NBA API.
-- Processes raw game logs into a clean analytics dataset.
-- Calculates rolling five-game averages for:
-  - Points
-  - Rebounds
-  - Assists
-  - Minutes
-- Produces `player_recent_production.csv` for downstream fantasy analytcs.
+Current metrics include:
 
----
-## Day 6 Completed Features
-### Recent Player Production v2
+- Points per game (PPG)
+- Rebounds per game (RPG)
+- Assists per game (APG)
+- Minutes per game (MPG)
+- Fantasy points per game
 
-The Recent Player Production pipeline has been expanded to analyze both short-term and medium-term player performance trends.
+Performance is analyzed across:
 
-New features include:
-- Last 5-game averages
-- Last 10-game averages
-- Games included in each sample
-- Reusable aggregation helper for production metrics
+- **Last 5 games**
+- **Last 10 games**
 
-Current production metrics:
-- Average Points (PPG)
-- Average Rebounds (RPG)
-- Average Assists (APG)
-- Average Minutes (MPG)
+The pipeline also records the number of games included in each sample.
 
-Output:
-data/processed/player_recent_production.csv
+### Configurable Fantasy Scoring
 
----
+Fantasy scoring is separated from the analytics logic through a configurable scoring system.
 
-## Day 7 Completed Features
+The current configuration supports **Yahoo Fantasy scoring**, including per-game fantasy point calculations.
 
-### Configurable Fantasy Scoring System
-  - Configurable fantasy scoring framework
-  - Yahoo Fantasy scoring configuration
-  - Per-game fantasy point calculation
-  - Recent fantasy production using:
-    - Last 5 games
-    - Last 10 games
-  - Fantasy points integrated into the player production pipeline
-* Introduced a config package to separate league scoring rules from analytics logic.
-* Established the foundation for supporting Yahoo, ESPN, and custom fantasy league scoring.
+The architecture is designed to support additional scoring systems, such as:
+
+- ESPN
+- Custom league scoring
+- Other fantasy formats
+
+### Minutes Trend
+
+The player production pipeline also calculates a short-term **Minutes Trend**:
+
+`Last 5 Games Average MPG − Last 10 Games Average MPG`
+
+A positive value indicates that a player's recent average minutes are higher than their longer-term average, while a negative value indicates a decrease.
+
+A complete 10-game sample is required for the trend to be considered valid.
+
+## Data Outputs
+
+Key processed datasets currently include:
+
+- `weekly_schedule.csv`
+- `weekly_rest_summary.csv`
+- `schedule_advantage.csv`
+- `player_recent_production.csv`
+
+These datasets form the foundation for the project's downstream fantasy decision models.
+
+## Project Status
+
+### Completed
+
+- ✅ NBA player data pipeline
+- ✅ Historical NBA schedule pipeline
+- ✅ Weekly schedule analysis
+- ✅ Team rest and back-to-back analysis
+- ✅ Schedule Advantage scoring model
+- ✅ Recent player production analysis
+- ✅ Last 5 / Last 10 performance analysis
+- ✅ Configurable fantasy scoring framework
+- ✅ Yahoo fantasy scoring
+- ✅ Recent fantasy production
+- ✅ Minutes Trend feature
+
+### In Progress
+
+- 🚧 Streaming Score model
+
+### Planned
+
+- ⏳ Injury Opportunity analysis
+- ⏳ Additional fantasy scoring configurations
+- ⏳ Power BI dashboard
+- ⏳ Integration of schedule, production, minutes, and injury factors into the final Streaming Score
+
+## Development
+
+Development practices, project architecture details, technical debt, and the current development roadmap are documented in [`DEVELOPMENT.md`](DEVELOPMENT.md).
+
+GitHub branches and pull requests are used to develop and review individual features before they are merged into `main`.

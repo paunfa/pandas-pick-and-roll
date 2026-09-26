@@ -1,32 +1,65 @@
 # Development Guide
 
-## Project Overview
+## 1. Project Overview
 
-Pandas Pick & Roll is an NBA fantasy basketball analytics dashboard designed to help fantasy managers identify waiver wire pickups and streaming opportunities.
+**Pandas Pick & Roll** is an NBA fantasy basketball analytics project designed to identify waiver-wire pickups and streaming opportunities.
 
-The project uses NBA data to calculate fantasy-relevant insights including:
-- Schedule advantages
-- Player trends
-- Minutes opportunities
-- Streaming scores
+The project analyzes NBA data to produce fantasy-relevant features including:
+
+- Schedule advantage
+- Recent player production
+- Minutes trends
+- Injury opportunity
+- Fantasy production
+- Streaming score
+
+The long-term goal is to provide these insights through a Power BI dashboard.
 
 ---
 
-# Project Structure
+## 2. Project Architecture
+
+The project follows this general pipeline:
+
+```text
+NBA Data
+   ↓
+Data Collection
+   ↓
+Raw Data
+   ↓
+Data Processing
+   ↓
+Feature Engineering
+   ↓
+Analytics Models
+   ↓
+Streaming Score
+   ↓
+Power BI Dashboard
 ```
+
+The project separates raw data, processed data, feature engineering, and analytical outputs so that each stage can be validated independently.
+
+---
+
+## 3. Project Structure
+
+```text
 fantasy-streaming-assistant/
 ├── data/
-│ ├── raw/
-│ └── processed/
+│   ├── raw/
+│   └── processed/
 │
 ├── scripts/
-│ ├── data_collection/
-│ └── data_processing/
+│   ├── data_collection/
+│   └── data_processing/
 │
 ├── dashboard/
 ├── sql/
 ├── utils/
-|
+├── config/
+│
 ├── README.md
 ├── DEVELOPMENT.md
 └── requirements.txt
@@ -34,412 +67,326 @@ fantasy-streaming-assistant/
 
 ---
 
-# Coding Standards
+## 4. Coding Standards
 
-## Python Style
+### Python
 
-Follow these conventions:
-
-- Use descriptive variable names.
-- Avoid generic names like `df` outside of quick exploration.
+- Use descriptive variable and function names.
+- Avoid generic names such as `df`, `data`, or `temp` outside of quick exploration.
 - Use type hints for functions.
 - Add docstrings to functions.
-- Keep scripts focused on one responsibility.
+- Keep scripts focused on a single responsibility.
+- Prefer reusable functions over duplicated logic.
 
-## Data Modeling Principles
-
-The project separates:
-
-- Human-readable classifications (e.g., `SCHEDULE_RATING`)
-- Numeric scores (future `SCHEDULE_SCORE`)
-- Composite analytics (future `STREAMING_SCORE`)
-
-## Development Workflow
-
-For each new feature:
-
-1. Write the transformation.
-2. Verify with temporary print statements.
-3. Validate the output.
-4. Remove temporary debugging output.
-5. Save the processed dataset.
----
-
-# Data Processing Standards
-
-- Convert date columns to `datetime64` before performing any date calculations.
-- Assign each game to a fantasy week using the Monday of that week (`WEEK_START`).
-- Validate each transformation with temporary print statements, then remove them once verified.
-
----
-
-# DataFrame Naming
+### DataFrames
 
 DataFrames should describe the data they contain.
 
-## Examples:
+Good:
 
-### Good:
-
-```
+```python
 players
 team_game_logs
 weekly_schedule
+player_recent_production
 streaming_scores
 ```
-### AVOID:
-```
+
+Avoid:
+
+```python
 df
 data
 temp
 ```
----
 
-# Functions
+### Data Processing
 
-Functions should include:
-
-* A descriptive name
-* Type hints
-* A docstring
-
-Example:
-
-```python
-def get_opponent(matchup: str) -> str:
-    """
-    Extract opponent team abbreviation.
-
-    Args:
-        matchup: NBA matchup string.
-
-    Returns:
-        Opponent team abbreviation.
-    """
-```
---- 
-# Data Pipeline Philosophy
-
- The project follows this structure:
-
-```
-Data Collection
-        ↓
-Raw Data
-        ↓
-Data Processing
-        ↓
-Feature Engineering
-        ↓
-Analytics Models
-        ↓
-Streaming Score  
-        ↓
-Power BI Dashboard
-```
+- Convert date columns to `datetime64` before performing date calculations.
+- Assign games to fantasy weeks using the Monday of that week (`WEEK_START`).
+- Keep raw datasets separate from processed analytical datasets.
+- Validate transformations before creating downstream features.
 
 ---
 
-# Git Workflow
+## 5. Data Modeling Principles
+
+The project distinguishes between:
+
+1. **Human-readable classifications**
+   - Example: `SCHEDULE_RATING`
+
+2. **Numeric scores**
+   - Example: future `SCHEDULE_SCORE`
+
+3. **Composite analytics**
+   - Example: future `STREAMING_SCORE`
+
+This separation keeps individual analytical components understandable and makes the final Streaming Score easier to explain and tune.
+
+---
+
+## 6. Feature Development Workflow
+
+For each new feature:
+
+1. Define the purpose of the feature.
+2. Identify the required input dataset(s).
+3. Implement the transformation.
+4. Validate the output.
+5. Check edge cases and missing data.
+6. Remove temporary debugging code.
+7. Save the processed output.
+8. Commit the completed feature to a dedicated Git branch.
+9. Open a pull request.
+10. Review the changes before merging into `main`.
+
+Intermediate calculations should be preserved when they provide useful transparency or may be required by future features.
+
+---
+
+## 7. Git Workflow
+
+Development should use feature branches rather than making feature changes directly on `main`.
+
+### Standard workflow
+
+```text
+main
+ ↓
+Create feature branch
+ ↓
+Develop + test
+ ↓
+Commit
+ ↓
+Push branch
+ ↓
+Open Pull Request
+ ↓
+Review
+ ↓
+Merge into main
+ ↓
+Delete feature branch
+```
+
+### Branch naming
+
+Use descriptive feature branches such as:
+
+```text
+feature/minutes-trend
+feature/injury-opportunity
+feature/streaming-score
+```
+
+### Commit messages
 
 Commits should describe meaningful changes.
 
-### Examples:
-
 Good:
 
-```
+```text
 Add NBA schedule data collection
-
-Create Weekly schedule analysis
-
+Add minutes trend feature
 Refactor file paths using pathlib
 ```
 
 Avoid:
-```
+
+```text
 Update stuff
-
 Fix code
-
 Changes
 ```
 
----
+### Pull Requests
 
-# Fantasy Scoring Design Decisions
+Pull requests should contain:
 
-Fantasy points are calculated at the individual game level before recent
-production averages are calculated.
+- A clear title
+- A short description of the change
+- Relevant validation or testing information
+- The files/features affected
 
-Per-game fantasy points are calculated using vectorized pandas operations
-rather than row-wise `DataFrame.apply()`.
-
-The reusable `calculate_fantasy_points()` utility remains available for
-individual stat-line calculations, testing, and validation, while the
-production pipeline uses vectorized calculations for efficiency.
+For completed features, prefer a **squash merge** when appropriate so the `main` branch maintains a clean feature-level history.
 
 ---
 
-# Current Development Goals
+## 8. Current Analytical Pipeline
 
-### Completed
+### Schedule Analytics
 
-#### Data Collection
+The schedule pipeline currently produces:
 
-* NBA player data collection
-* Active player dataset
-* Team game log collection
-* Player game log collection
+- Weekly schedule information
+- Team rest analysis
+- Back-to-back detection
+- Schedule Advantage
 
-#### Data Processing
+The Version 1 Schedule Advantage model uses:
 
-* Team game log processing
-* Player game log processing
-* Player game log deduplication and chronological sorting
+- Game Score
+- Rest Score
+- Back-to-Back Penalty
 
-#### Schedule Analytics
+The model intentionally uses transparent scoring rules so that its behavior can be understood, debugged, and tuned later.
 
-* Weekly schedule analytics
-* Team rest analysis
-* Schedule Advantage model
+### Player Analytics
 
-#### Player Analytics
+The player production pipeline currently produces:
 
-* Recent Player Production v1
-* Recent Player Production v2
-* Last 5-game production averages
-* Last 10-game production averages
-* Games played within each rolling window
+- Last 5-game averages
+- Last 10-game averages
+- Games played within each rolling window
+- Points, rebounds, assists, and minutes averages
+- Fantasy-point averages
+- Minutes Trend
 
-#### Fantasy Production
+Minutes Trend currently compares:
 
-* Configurable fantasy scoring architecture
-* Initial Yahoo Fantasy scoring configuration
-* Reusable fantasy point calculation utility
-* Per-game fantasy point calculation
-* Last 5-game average fantasy points
-* Last 10-game average fantasy points
-
-### In Progress
-
-#### Per-Game Fantasy Tracking
-
-* Continue expanding the fantasy production foundation
-* Develop additional fantasy-relevant player production metrics
-* Prepare fantasy production features for integration into the Streaming Score
-
-### Technical Debt
-
-#### Data Collection
-
-* Add retry logic for `nba_api` requests
-* Add request throttling (`time.sleep`)
-* Continue collection after individual player failures
-* Log failed player IDs
-
-#### Testing
-
-* Add automated tests for fantasy scoring calculations
-* Add validation for scoring configurations
-* Expand test coverage for player production calculations
-
-#### Configuration
-
-* Complete ESPN scoring configuration
-* Implement custom league scoring configuration
-* Add validation for configurable scoring dictionaries
-
-### Future Feature Engineering
-
-The immediate goal is to complete the points-based, per-game fantasy tracking system before expanding into additional fantasy formats.
-
-Planned features include:
-
-* Fantasy Production Score
-* Minutes Trend Score
-* Injury Opportunity Score
-* Streaming Score
-
-### Long-Term Fantasy Goals
-
-After the initial Pick & Roll project is fully developed, prioritize long-term support for 9-category (9-cat) fantasy basketball analysis.
-
-Potential future expansion includes:
-
-* 9-cat category analysis
-* Category-specific player strengths and weaknesses
-* Z-score based player evaluation
-* Punt-category analysis
-* 9-cat waiver and streaming recommendations
-
-
----
-# DEV DIARY
-
-## Day 2: Weekly Schedule Analytics Pipeline
-
-Completed:
-- Built NBA schedule data collection pipeline
-- Created raw and processed data structure
-- Added weekly schedule calculations
-- Added schedule strength ratings
-- Improved script organization
-- Connected project to GitHub
-- Established main branch workflow
-
-Git concepts learned:
-- Feature branches
-- Remote repositories
-- Push/pull workflow
-- Branch merging
-- Default branch management
-
-## Day 3: Per-Team Rest Day Analysis
-
-### Completed
-
-- Added shared path utilities
-- Built rest analysis pipeline
-- Calculated days between games
-- Calculated actual rest days
-- Detected back-to-back games
-- Created team rest summary dataset
-
-### Design Decisions
-
-- Kept raw game logs separate from processed analytics outputs
-- FINALLY stopped saving intermediate outputs to be more efficient with our space
-  - Saved team-level summaries instead of duplicate game-level datasets
-- Distinguished calendar gaps from actual rest days
-
-## Day 4: Code Quality Refactoring and Weekly Schedule Advantage Score
-
-- Added main() functions to all project scripts.
-- Removed unnecessary debug print statements.
-- Standardized script structure across the project.
-- Removed `games_by_team.csv` because it duplicated information already available in the processed schedule pipeline.
-
-  - The project now prioritizes analytical outputs over intermediate aggregations that do not create additional decision-making value.
-- Renamed schedule datasets for clearer raw/processed separation:
-  - team_game_logs_raw.csv
-  - team_game_logs_pro.csv
-- Updated utils/paths.py with centralized file path constants.
-  
-### Data Pipeline
-
-Current schedule pipeline:
-```
-NBA API
-    ↓
-get_schedule.py
-    ↓
-team_game_logs_raw.csv
-    ↓
-process_schedule.py
-    ↓
-team_game_logs_pro.csv
-    ├── weekly_schedule.csv
-    ├── team_rest_summary.csv
-    ├── weekly_rest_summary.csv
-    └── schedule_advantage.csv
+```text
+Last 5-game average MPG
+        -
+Last 10-game average MPG
 ```
 
-### Schedule Advantage Model (Version 1)
+A complete 10-game window is required for a valid Minutes Trend value.
 
-- Inputs:
-
-  - weekly_schedule.csv
-  - weekly_rest_summary.csv
-
-- Scoring Components:
-
-  - Game Score
-  - Rest Score
-  - Back-to-Back Penalty
-
-- Output:
-
-  - schedule_advantage.csv
-
-* Version 1 intentionally uses transparent scoring rules to support debugging, explainability, and future model tuning.
-
-## Day 5: Recent Player Production
-
-### Recent Player Production (v1)
-
-Created a complete player analytics pipeline.
-
-Data Collection:
-- get_player_game_logs.py
-
-Processing:
-- process_player_game_logs.py
-
-Feature Engineering:
-- analyze_player_production.py
-
-Outputs:
-- player_game_logs_raw.csv
-- player_game_logs_pro.csv
-- player_recent_production.csv
-
-### Lessons Learned
-
-- Use `groupby().tail(n)` to isolate each player's most recent games.
-- Separate data processing from feature engineering.
-- Validate intermediate datasets before creating downstream features.
-- Maintain descriptive variable names and consistent project structure.
-
-## Day 6: Recent Player Production v2
-
-- Refactored production aggregation into reusable helper function:
-    calculate_recent_production()
-
-- Added rolling 10-game production analysis
-
-- Added games played counts for each rolling window
-
-- Merged 5-game and 10-game summaries into a unified
-  player_recent_production.csv dataset
-
-- Improved variable naming consistency
-
-- Added function type hints and documentation
-
-## Day 7: Fantasy Production Foundation
-- Created config/fantasy_scoring.py to centralize fantasy scoring configurations.
-- Chose a dictionary-based configuration approach to allow scoring systems to be passed into reusable calculation functions.
-- Planned a reusable fantasy point utility that will consume scoring dictionaries and produce fantasy point totals independent of league format.
-
-
+### Fantasy Production
 
 The project currently supports configurable points-based fantasy scoring.
 
-The fantasy production pipeline follows this structure:
+The pipeline follows:
 
-```
+```text
 Player Game Logs
-        ↓
+       ↓
 Processed Player Game Logs
-        ↓
+       ↓
 Fantasy Scoring Configuration
-        ↓
+       ↓
 Per-Game Fantasy Points
-        ↓
+       ↓
 Recent Player Production
-        ↓
+       ↓
 Last 5 / Last 10 Fantasy Averages
 ```
 
 The initial scoring configuration is based on Yahoo Fantasy points scoring.
 
-Fantasy scoring is separated from the calculation logic through configurable
-scoring dictionaries, allowing future support for ESPN and custom league
-formats without changing the underlying fantasy point calculation logic.
+Fantasy scoring is separated from calculation logic through configurable scoring dictionaries so that additional scoring systems can be added without rewriting the underlying calculation logic.
 
-Current fantasy production features include:
+Per-game fantasy points are calculated using vectorized pandas operations rather than row-wise `DataFrame.apply()`.
 
-- `FANTASY_POINTS`
-- `LAST_FIVE_AVG_FANTASY_PTS`
-- `LAST_TEN_AVG_FANTASY_PTS`
+The reusable `calculate_fantasy_points()` utility remains available for individual stat-line calculations, testing, and validation.
+
+---
+
+## 9. Current Project Status
+
+### Completed
+
+#### Data Collection
+
+- NBA player data collection
+- Active player dataset
+- Team game log collection
+- Player game log collection
+
+#### Data Processing
+
+- Team game log processing
+- Player game log processing
+- Player game log deduplication
+- Chronological sorting
+- Centralized project paths
+
+#### Schedule Analytics
+
+- Weekly schedule analytics
+- Team rest analysis
+- Back-to-back detection
+- Schedule Advantage model
+
+#### Player Analytics
+
+- Recent Player Production
+- Last 5-game production averages
+- Last 10-game production averages
+- Games played within rolling windows
+- Minutes Trend
+
+#### Fantasy Production
+
+- Configurable fantasy scoring architecture
+- Yahoo Fantasy points configuration
+- Reusable fantasy-point calculation utility
+- Per-game fantasy-point calculation
+- Last 5-game fantasy averages
+- Last 10-game fantasy averages
+
+---
+
+## 10. Current Development Focus
+
+The immediate goal is to complete the points-based, per-game fantasy tracking system before expanding into additional fantasy formats.
+
+Current/future feature priorities include:
+
+1. Fantasy Production Score
+2. Minutes Trend Score
+3. Injury Opportunity Score
+4. Streaming Score
+5. Power BI dashboard integration
+
+---
+
+## 11. Technical Debt
+
+### Data Collection
+
+- Add retry logic for `nba_api` requests.
+- Add request throttling.
+- Continue collection after individual player failures.
+- Log failed player IDs.
+
+### Testing
+
+- Add automated tests for fantasy scoring calculations.
+- Add validation for scoring configurations.
+- Expand test coverage for player production calculations.
+
+### Configuration
+
+- Complete ESPN scoring configuration.
+- Implement custom league scoring configuration.
+- Add validation for configurable scoring dictionaries.
+
+---
+
+## 12. Long-Term Goals
+
+After the initial Pick & Roll system is fully developed, the project will expand toward 9-category fantasy basketball analysis.
+
+Potential future capabilities include:
+
+- 9-cat category analysis
+- Category-specific player strengths and weaknesses
+- Z-score based player evaluation
+- Punt-category analysis
+- 9-cat waiver and streaming recommendations
+
+---
+
+## 13. Design Principles
+
+The project prioritizes:
+
+- **Transparency** — individual analytical components should be understandable.
+- **Modularity** — features should be reusable and independently testable.
+- **Separation of concerns** — collection, processing, feature engineering, and analytics remain distinct.
+- **Explainability** — scoring models should be understandable before being made more sophisticated.
+- **Validation** — new features should be validated before becoming inputs to downstream models.
+- **Extensibility** — scoring systems and analytical features should be configurable where practical.
