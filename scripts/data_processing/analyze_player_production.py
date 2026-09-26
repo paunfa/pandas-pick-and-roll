@@ -117,6 +117,16 @@ def analyze_player_production():
         ]
     )
 
+    # Calculate short-term minutes trend by comparing the last 5 games
+    # to the last 10 games. A complete 10-game window is required
+    # for a valid trend measurement.
+    player_recent_production["MINUTES_TREND"] = (
+        player_recent_production["LAST_FIVE_AVG_MPG"]
+        - player_recent_production["LAST_TEN_AVG_MPG"]
+    ).where(
+        player_recent_production["LAST_TEN_GAMES"] >= 10
+    ).round(1)
+
     # Saves to recent_player_production.csv
     output_path = RECENT_PLAYER_PRODUCTION_PATH
     player_recent_production.to_csv(
