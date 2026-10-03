@@ -10,15 +10,18 @@ Creates:
 
 import pandas as pd
 from nba_api.stats.endpoints import playergamelog
+
 from utils.paths import RAW_DATA
+from utils.nba_season import determine_target_season
 
-
-def get_player_logs(player_id, player_name):
+def get_player_logs(player_id, player_name, season):
 
     print(f"Collecting {player_name}")
 
     logs = playergamelog.PlayerGameLog(
-        player_id=player_id
+        player_id=player_id,
+        season=season,
+        season_type_all_star="Regular Season"
     )
 
     game_log = logs.get_data_frames()[0]
@@ -29,6 +32,10 @@ def get_player_logs(player_id, player_name):
 
 
 def main():
+
+    target_season = determine_target_season()
+
+    print(f"Collecting NBA season: {target_season}")
 
     players = pd.read_csv(
         RAW_DATA / "active_players.csv"
@@ -46,7 +53,8 @@ def main():
 
         player_logs = get_player_logs(
             player["id"],
-            player["full_name"]
+            player["full_name"],
+            target_season
         )
 
         all_logs.append(player_logs)
