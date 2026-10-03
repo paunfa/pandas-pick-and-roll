@@ -13,13 +13,13 @@ Creates:
 import pandas as pd
 from nba_api.stats.endpoints import LeagueGameLog
 from utils.paths import RAW_DATA
+from utils.nba_season import determine_target_season
 
-def get_schedule():
-
-    print("Downloading 2025-26 team game logs...")
+def get_schedule(season):
+    print(f"Downloading {season} team game logs...")
 
     game_logs = LeagueGameLog(
-        season='2025-26',
+        season=season,
         season_type_all_star='Regular Season',
         player_or_team_abbreviation='T'
     )
@@ -74,7 +74,11 @@ def get_schedule():
     print("===================================")
 
 def main():
-    get_schedule()
+    target_season = determine_target_season()
+
+    print(f"Collecting NBA season: {target_season}")
+
+    get_schedule(target_season)
 
 if __name__ == "__main__":
     main()
